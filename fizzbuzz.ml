@@ -15,7 +15,7 @@ let main x =
  
 let rec counter n =
   match n with
-    1 -> main 1 
+    0 -> () 
     | _ -> counter (n - 1) ;
            main n ;;
            
