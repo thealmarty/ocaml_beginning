@@ -18,7 +18,7 @@ let fizzbuzztest x =
 let rec counter_fizzbuzz n =
   match n with
     0 -> () 
-    | _ -> counter_fizzbuzz (n - 1) ; (*end of expression 1*)
+    | _ -> counter_fizzbuzz (n - 1) ; (*end of first expression in match with _ *)
            fizzbuzztest n ;; (*end of definition of counter_fizzbuzz *)
            
 counter_fizzbuzz 100 ;;
