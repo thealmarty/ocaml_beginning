@@ -1,6 +1,7 @@
 (* fizzbuzz.ml Fizzbuzz test in OCaml*)
 
-let main x =
+(*checks whether the number x should be printed as one of the strings "fizz", "buzz", or "fizzbuzz" or the number itself.*)
+let fizzbuzztest x = 
   if x mod 3 = 0 then 
     if x mod 5 = 0 then
       print_string ("fizzbuzz")
@@ -12,12 +13,13 @@ let main x =
     else
       print_int x;
   print_newline ();;
- 
-let rec counter n =
+
+(*count from n to 0 and print out the result of the function 'fizzbuzztest'*)
+let rec counter_fizzbuzz n =
   match n with
     0 -> () 
-    | _ -> counter (n - 1) ;
-           main n ;;
+    | _ -> counter_fizzbuzz (n - 1) ;
+           fizzbuzztest n ;;
            
 counter 100 ;;
 
